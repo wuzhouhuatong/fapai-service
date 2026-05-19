@@ -528,7 +528,7 @@
   </div>
 
   <!-- 行动号召 -->
-  <div class="gradient-cta text-white rounded-xl p-8 mb-6 text-center">
+  <div id="ctaArea" class="gradient-cta text-white rounded-xl p-8 mb-6 text-center cursor-pointer">
     <h3 class="text-2xl font-bold mb-2">⏰ 现在行动，抢先一步</h3>
     <p class="text-lg opacity-85 mb-2">梧州法拍市场优质房源每月更新，热门标的往往在第一拍就被拍走</p>
     <p class="text-lg opacity-85 mb-6">现在预约，我们第一时间为您推送匹配房源！</p>
@@ -598,6 +598,23 @@
     </div>
   </div>
 
+  <!-- 微信弹窗 -->
+  <div id="wechatModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden" onclick="closeModal(event)">
+    <div class="bg-white rounded-2xl p-8 max-w-sm mx-4 text-center shadow-2xl relative" onclick="event.stopPropagation()">
+      <button class="absolute top-3 right-4 text-gray-400 hover:text-gray-600 text-2xl leading-none" onclick="closeModal(event)">&times;</button>
+      <div class="text-5xl mb-3">📱</div>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">扫码联系我</h3>
+      <p class="text-sm text-gray-500 mb-4">添加微信，免费获取标的分析报告</p>
+      <div class="bg-white rounded-xl p-4 mb-4 flex items-center justify-center h-48 border border-gray-200">
+        <img src="./qrcode.png" alt="微信二维码" class="h-full object-contain">
+      </div>
+      <div class="text-left text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
+        <p><span class="font-bold">微信：</span>man8897</p>
+        <p><span class="font-bold">手机：</span>139 7748 8897</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <div class="text-center text-gray-400 text-sm pb-8 border-t border-gray-200 pt-6">
     广西铧通破产管理有限公司<br>
@@ -611,6 +628,15 @@
   document.querySelectorAll('.faq-a').forEach((el, i) => {
     if (i !== 0) el.classList.remove('open');
   });
+
+  // 微信弹窗
+  function closeModal(e) {
+    document.getElementById('wechatModal').classList.add('hidden');
+  }
+  function openWechat() {
+    document.getElementById('wechatModal').classList.remove('hidden');
+  }
+  document.getElementById('ctaArea').addEventListener('click', openWechat);
 </script>
 
 </body>
