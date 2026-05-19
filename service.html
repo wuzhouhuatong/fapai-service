@@ -564,37 +564,13 @@
     </div>
   </div>
 
-  <!-- 联系方式 -->
-  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
-    <h2 class="text-xl font-bold mb-4">📞 联系我们</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div>
-        <h3 class="font-bold text-blue-700">南宁总部</h3>
-        <div class="text-sm text-gray-600 mt-2 space-y-1">
-          <p>📍 青秀区东葛路龙光玖珑华府</p>
-          <p>📞 139 7748 8897</p>
-          <p>💬 微信：man8897</p>
-        </div>
-      </div>
-      <div>
-        <h3 class="font-bold text-blue-700">分支机构</h3>
-        <div class="text-sm text-gray-600 mt-2 space-y-1">
-          <p>📍 梧州分公司（万秀区龙山路42号负二层）</p>
-          <p>📍 柳州分公司</p>
-          <p>📍 北海分公司</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- CTA 免费分析 -->
-  <div class="gradient-header text-white rounded-xl p-8 mb-6 text-center">
-    <h3 class="text-2xl font-bold mb-2">想了解某套法拍房？</h3>
-    <p class="text-lg opacity-80 mb-6">发一个淘宝/京东链接给我们 → 免费出一份标的分析报告</p>
+  <div id="ctaArea2" class="gradient-header text-white rounded-xl p-8 mb-6 text-center cursor-pointer">
+    <h3 class="text-xl font-bold mb-4">想了解某套法拍房？</h3>
     <div class="flex flex-wrap justify-center gap-4">
-      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">📱 扫码咨询</span>
-      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">📞 电话预约</span>
-      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">🏠 到店免费评估</span>
+      <span class="bg-white/20 rounded-full px-6 py-3 text-base font-medium">📱 扫码咨询</span>
+      <span class="bg-white/20 rounded-full px-6 py-3 text-base font-medium">📞 电话预约</span>
+      <span class="bg-white/20 rounded-full px-6 py-3 text-base font-medium">🏠 到店免费评估</span>
     </div>
   </div>
 
@@ -637,6 +613,7 @@
     document.getElementById('wechatModal').classList.remove('hidden');
   }
   document.getElementById('ctaArea').addEventListener('click', openWechat);
+  document.getElementById('ctaArea2').addEventListener('click', openWechat);
 </script>
 
 </body>
