@@ -9,12 +9,18 @@
 <style>
   body { font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif; }
   .gradient-header { background: linear-gradient(135deg, #1a2332 0%, #2d4a8a 50%, #1a5276 100%); }
+  .gradient-cta { background: linear-gradient(135deg, #1a5276 0%, #2d4a8a 50%, #1a2332 100%); }
   .card-hover { transition: all 0.25s ease; }
   .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(45,74,138,0.15); }
   .circle-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
   .step-line::after { content: ''; position: absolute; top: 28px; left: 28px; width: 2px; height: calc(100% + 16px); background: #e8e6e0; }
   .step-line:last-child::after { display: none; }
   .badge-cert { border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.12); backdrop-filter: blur(4px); }
+  .faq-q { cursor: pointer; }
+  .faq-q:hover { color: #2d4a8a; }
+  .faq-a { display: none; }
+  .faq-a.open { display: block; }
+  .price-highlight { color: #dc2626; }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -68,6 +74,146 @@
     </div>
   </div>
 
+  <!-- 为什么要买法拍房 -->
+  <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border border-red-100 p-6 mb-10">
+    <h2 class="text-2xl font-bold mb-4">🔥 法拍房便宜20%-40%，但坑也多——</h2>
+    <p class="text-gray-600 mb-4 text-lg">不懂流程、不会出价、怕遇纠纷？我们替你搞定一切！</p>
+    <div class="bg-white rounded-lg p-5 border border-red-100">
+      <p class="font-bold mb-2">💡 以梧州一套市场价 <span class="text-2xl price-highlight">100万</span> 的房子为例：</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-3">
+        <div class="text-center p-3 bg-red-50 rounded-lg">
+          <div class="text-sm text-gray-500">法拍成交价约</div>
+          <div class="text-xl font-bold text-green-600">70万～80万</div>
+        </div>
+        <div class="text-center p-3 bg-red-50 rounded-lg">
+          <div class="text-sm text-gray-500">节省金额</div>
+          <div class="text-xl font-bold price-highlight">20万～30万</div>
+        </div>
+        <div class="text-center p-3 bg-red-50 rounded-lg">
+          <div class="text-sm text-gray-500">扣除税费后实际节省</div>
+          <div class="text-xl font-bold text-green-600">约15万～25万</div>
+        </div>
+      </div>
+      <p class="text-center text-gray-600 mt-3 font-medium">法拍房是目前市场上为数不多还能买到低价好房的机会。</p>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
+    <h2 class="text-xl font-bold mb-4">👥 哪些人适合找我们？</h2>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">刚需购房，预算有限，想买便宜</span>
+      </div>
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">有闲置资金，想做房产投资</span>
+      </div>
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">想置换房产，手里有旧房</span>
+      </div>
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">企业主，需要处置抵押资产</span>
+      </div>
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">外地在梧，不熟悉本地市场</span>
+      </div>
+      <div class="flex items-start gap-2 p-3 bg-blue-50 rounded-lg">
+        <span class="text-green-500 font-bold mt-0.5">✅</span>
+        <span class="text-sm">第一次参拍，不懂流程</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 为什么要找我们 - 对比表 -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
+    <h2 class="text-xl font-bold mb-4">❓ 为什么不自己去拍，要找我们？</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="text-left p-3 font-bold">对比项</th>
+            <th class="text-left p-3 font-bold text-red-600">自己参拍</th>
+            <th class="text-left p-3 font-bold text-green-600">找我们</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium">风险排查</td>
+            <td class="p-3 text-gray-500">靠自己判断，容易踩坑</td>
+            <td class="p-3 text-green-600">专业团队实地调查</td>
+          </tr>
+          <tr class="border-b border-gray-100 bg-gray-50">
+            <td class="p-3 font-medium">出价策略</td>
+            <td class="p-3 text-gray-500">容易冲动超价</td>
+            <td class="p-3 text-green-600">大数据分析建议出价区间</td>
+          </tr>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium">贷款问题</td>
+            <td class="p-3 text-gray-500">可能拍下没钱付</td>
+            <td class="p-3 text-green-600">竞拍前预审贷款额度</td>
+          </tr>
+          <tr class="border-b border-gray-100 bg-gray-50">
+            <td class="p-3 font-medium">过户流程</td>
+            <td class="p-3 text-gray-500">自己跑十几个部门</td>
+            <td class="p-3 text-green-600">全程代办，你只等收房</td>
+          </tr>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium">遇到纠纷</td>
+            <td class="p-3 text-gray-500">自己找律师，费时费钱</td>
+            <td class="p-3 text-green-600">9位律师免费一年护航</td>
+          </tr>
+          <tr class="border-b border-gray-100 bg-gray-50">
+            <td class="p-3 font-medium">腾房问题</td>
+            <td class="p-3 text-gray-500">不知道怎么处理</td>
+            <td class="p-3 text-green-600">协助申请法院强制清场</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">时间成本</td>
+            <td class="p-3 text-gray-500">耗费大量时间精力</td>
+            <td class="p-3 text-green-600">一对一专属顾问跟进</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 免费服务 -->
+  <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200 p-6 mb-10">
+    <h2 class="text-xl font-bold mb-4">🎁 以下服务完全免费</h2>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">📋</span>
+        <span class="text-sm">免费帮您分析任意一套法拍标的</span>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">📊</span>
+        <span class="text-sm">免费出具尽职调查报告</span>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">🏦</span>
+        <span class="text-sm">免费贷款额度预审</span>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">📱</span>
+        <span class="text-sm">免费竞拍流程指导</span>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">⚖️</span>
+        <span class="text-sm">购买后一年免费法律咨询</span>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+        <span class="text-xl">🔔</span>
+        <span class="text-sm">免费个性化房源推送</span>
+      </div>
+    </div>
+    <p class="text-center text-green-700 font-bold mt-4">零门槛了解，没有任何压力！</p>
+  </div>
+
   <!-- 资质与规模 -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10 flex flex-col md:flex-row gap-6 items-start">
     <div class="flex-shrink-0">
@@ -80,14 +226,14 @@
         <div><span class="text-green-600 font-bold">✓</span> 阿里拍卖 &amp; 京东拍卖南宁核心服务商</div>
         <div><span class="text-green-600 font-bold">✓</span> 北部湾联合产权交易所战略合作服务商</div>
         <div><span class="text-green-600 font-bold">✓</span> 广西南方担保 · 金融城战略合作伙伴</div>
-        <div><span class="text-green-600 font-bold">✓</span> 南宁总店 + 武鸣、东葛、翡翠园等5家自营门店</div>
-        <div><span class="text-green-600 font-bold">✓</span> 柳州 / 梧州 / 北海 三家分公司全区覆盖</div>
+        <div><span class="text-green-600 font-bold">✓</span> 梧州总店 + 多家自营门店</div>
+        <div><span class="text-green-600 font-bold">✓</span> 南宁 / 柳州 / 北海 三家分公司全区覆盖</div>
       </div>
     </div>
   </div>
 
   <!-- 服务项目 -->
-  <h2 class="text-2xl font-bold mb-6">我们能为你做什么</h2>
+  <h2 class="text-2xl font-bold mb-6">🛠️ 我们能为您做什么</h2>
 
   <div class="grid md:grid-cols-2 gap-5 mb-10">
 
@@ -108,23 +254,6 @@
       </div>
     </div>
 
-    <!-- 法律支持 -->
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 card-hover">
-      <div class="flex items-start gap-4">
-        <div class="circle-icon bg-indigo-50 text-indigo-600 flex-shrink-0">⚖️</div>
-        <div>
-          <h3 class="text-lg font-bold mb-1">法律支持团队</h3>
-          <p class="text-sm text-gray-500 mb-3">与广西志飞律师事务所深度战略合作</p>
-          <ul class="space-y-1.5 text-sm">
-            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 9位资深律师团队7×24小时法律支持</li>
-            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 司法辅助：与南宁6大城区法院深度协同</li>
-            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 武鸣恒正金融调解中心（法院特邀调解）</li>
-            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 北部湾公证处战略合作，全流程合规保障</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <!-- 市场分析 -->
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 card-hover">
       <div class="flex items-start gap-4">
@@ -137,6 +266,22 @@
             <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 折扣力度 vs 法拍市场平均水平</li>
             <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 同区域历史成交数据参考</li>
             <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 建议出价区间 &amp; 是否等二拍策略</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 法律支持 -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 card-hover">
+      <div class="flex items-start gap-4">
+        <div class="circle-icon bg-indigo-50 text-indigo-600 flex-shrink-0">⚖️</div>
+        <div>
+          <h3 class="text-lg font-bold mb-1">法律支持团队</h3>
+          <p class="text-sm text-gray-500 mb-3">与广西志飞律师事务所深度战略合作</p>
+          <ul class="space-y-1.5 text-sm">
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 9位资深律师团队7×24小时法律支持</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 与南宁6大城区法院深度协同</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 北部湾公证处战略合作，全流程合规保障</li>
           </ul>
         </div>
       </div>
@@ -212,7 +357,7 @@
   </div>
 
   <!-- 增值服务 -->
-  <h2 class="text-2xl font-bold mb-6">增值服务</h2>
+  <h2 class="text-2xl font-bold mb-6">💎 增值服务</h2>
   <div class="grid md:grid-cols-3 gap-4 mb-10">
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 card-hover">
       <div class="text-2xl mb-2">🔔</div>
@@ -241,8 +386,67 @@
     </div>
   </div>
 
+  <!-- FAQ -->
+  <h2 class="text-2xl font-bold mb-6">❓ 客户常见问题</h2>
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 divide-y divide-gray-100 mb-10">
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：法拍房能贷款吗？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a open mt-2 text-sm text-gray-600">可以！我们与十余家银行合作，竞拍前就帮您预审额度，确保拍下来有钱付。</div>
+    </div>
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：拍下来住的人不走怎么办？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a mt-2 text-sm text-gray-600">我们协助您向法院申请强制腾退，有专业律师和法院协同处理，不用您自己面对。</div>
+    </div>
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：有没有买了之后产权有问题的风险？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a mt-2 text-sm text-gray-600">我们在竞拍前就出具完整的尽职调查报告，产权隐患提前排查，风险提前告知。</div>
+    </div>
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：保证金交了拍不到怎么办？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a mt-2 text-sm text-gray-600">保证金全额退还，我们跟进退款流程，不用担心。</div>
+    </div>
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：法拍房能落户吗？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a mt-2 text-sm text-gray-600">根据具体房产情况不同，我们会提前为您核查户口和学区情况，确保符合您的需求。</div>
+    </div>
+    <div class="p-5">
+      <div class="faq-q flex items-center justify-between font-bold cursor-pointer" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>Q：第一次参拍需要准备什么？</span>
+        <span class="text-gray-400">▼</span>
+      </div>
+      <div class="faq-a mt-2 text-sm text-gray-600">联系我们就好，从注册账号、准备保证金到竞拍出价，全程有专人指导，不懂没关系。</div>
+    </div>
+  </div>
+
+  <!-- 诚信承诺 -->
+  <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100 p-6 mb-10">
+    <h2 class="text-xl font-bold mb-3">🛡️ 我们承诺对您诚实</h2>
+    <ul class="space-y-2 text-sm">
+      <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 不是所有法拍房都值得拍，我们会告诉您哪些不建议参与</li>
+      <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 有些房子腾退难度大，我们会提前告知风险</li>
+      <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 我们不会为了促成交易而隐瞒任何问题</li>
+      <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 您的利益，就是我们的口碑</li>
+    </ul>
+    <p class="text-center font-bold text-blue-700 mt-4">诚信经营10年，口碑是我们最大的资产。</p>
+  </div>
+
   <!-- 经典案例 -->
-  <h2 class="text-2xl font-bold mb-6">经典案例</h2>
+  <h2 class="text-2xl font-bold mb-6">🏆 经典案例</h2>
   <div class="grid md:grid-cols-2 gap-4 mb-10">
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 card-hover">
       <div class="flex items-center gap-3 mb-3">
@@ -287,7 +491,7 @@
   </div>
 
   <!-- 服务流程 -->
-  <h2 class="text-2xl font-bold mb-6">服务流程</h2>
+  <h2 class="text-2xl font-bold mb-6">📋 服务流程</h2>
   <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 mb-10">
     <div class="grid md:grid-cols-6 gap-4">
       <div class="text-center relative step-line">
@@ -323,6 +527,17 @@
     </div>
   </div>
 
+  <!-- 行动号召 -->
+  <div class="gradient-cta text-white rounded-xl p-8 mb-6 text-center">
+    <h3 class="text-2xl font-bold mb-2">⏰ 现在行动，抢先一步</h3>
+    <p class="text-lg opacity-85 mb-2">梧州法拍市场优质房源每月更新，热门标的往往在第一拍就被拍走</p>
+    <p class="text-lg opacity-85 mb-6">现在预约，我们第一时间为您推送匹配房源！</p>
+    <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-6 py-3 text-lg">
+      <span>📱</span>
+      <span>发链接给我 → 出分析报告</span>
+    </div>
+  </div>
+
   <!-- 全区布局 -->
   <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100 p-6 mb-10">
     <div class="flex items-center gap-3 mb-4">
@@ -331,16 +546,16 @@
     </div>
     <div class="grid md:grid-cols-4 gap-4 text-sm">
       <div class="bg-white rounded-lg p-4 shadow-sm">
-        <div class="font-bold">南宁总部</div>
-        <div class="text-gray-500 text-xs mt-1">青秀区东葛路龙光玖珑华府<br>5家自营门店</div>
+        <div class="font-bold">梧州总部</div>
+        <div class="text-gray-500 text-xs mt-1">梧州市龙山路星朗名都42号负二层<br>多家自营门店</div>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm">
+        <div class="font-bold">南宁分公司</div>
+        <div class="text-gray-500 text-xs mt-1">重点布局首府市场</div>
       </div>
       <div class="bg-white rounded-lg p-4 shadow-sm">
         <div class="font-bold">柳州分公司</div>
-        <div class="text-gray-500 text-xs mt-1">重点布局工业重镇市场</div>
-      </div>
-      <div class="bg-white rounded-lg p-4 shadow-sm">
-        <div class="font-bold">梧州分公司</div>
-        <div class="text-gray-500 text-xs mt-1">西江经济带枢纽<br>辐射粤桂交界区域</div>
+        <div class="text-gray-500 text-xs mt-1">服务工业重镇市场</div>
       </div>
       <div class="bg-white rounded-lg p-4 shadow-sm">
         <div class="font-bold">北海分公司</div>
@@ -349,23 +564,54 @@
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="gradient-header text-white rounded-xl p-8 mb-6 text-center">
-    <h3 class="text-2xl font-bold mb-2">想看法拍房？</h3>
-    <p class="text-lg opacity-80 mb-6">发一个淘宝/京东链接过来，免费帮你做一份标的分析</p>
-    <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-6 py-3 text-lg">
-      <span>📱</span>
-      <span>发链接给我 → 出分析报告</span>
+  <!-- 联系方式 -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
+    <h2 class="text-xl font-bold mb-4">📞 联系我们</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="font-bold text-blue-700">梧州总部</h3>
+        <div class="text-sm text-gray-600 mt-2 space-y-1">
+          <p>📍 梧州市龙山路星朗名都42号负二层</p>
+          <p>📞 139 7748 8897</p>
+          <p>💬 微信：扫描二维码添加</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold text-blue-700">分支机构</h3>
+        <div class="text-sm text-gray-600 mt-2 space-y-1">
+          <p>📍 南宁分公司</p>
+          <p>📍 柳州分公司</p>
+          <p>📍 北海分公司</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Contact -->
+  <!-- CTA 免费分析 -->
+  <div class="gradient-header text-white rounded-xl p-8 mb-6 text-center">
+    <h3 class="text-2xl font-bold mb-2">想了解某套法拍房？</h3>
+    <p class="text-lg opacity-80 mb-6">发一个淘宝/京东链接给我们 → 免费出一份标的分析报告</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">📱 扫码咨询</span>
+      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">📞 电话预约</span>
+      <span class="bg-white/20 rounded-full px-5 py-2.5 text-sm">🏠 到店免费评估</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <div class="text-center text-gray-400 text-sm pb-8 border-t border-gray-200 pt-6">
     广西铧通破产管理有限公司<br>
     "万千道，立于信" — 专业 · 创新 · 共赢
   </div>
 
 </div>
+
+<script>
+  // FAQ: 默认只开第一个，其余折叠
+  document.querySelectorAll('.faq-a').forEach((el, i) => {
+    if (i !== 0) el.classList.remove('open');
+  });
+</script>
 
 </body>
 </html>
